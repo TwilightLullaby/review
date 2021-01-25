@@ -1,1 +1,104 @@
+c#공부 1일차
 
+c#도 문장 끝날때 ; 붙인다 
+
+변수는 자주쓰는 4가지종류가있다
+chapter1 변수
+
+1)정수를 표현하는 int형(음수나 양수)
+ex)int level =6;
+
+2)실수를 표현하는 float(소수 ex)3.5)
++float형 자료형 변수는 소수점이면 f를붙인다
+ex)float strength = 15.5f
+
+3)문자들을 표현하는 string
++c언어로 따지면 char [sizeof] 공간 자동으로 맞춰주는거라고 생각하면 편하다
+ex)string playerName = "나검사";
+
+4)논리를 판단하는 bool 
++간단하다 참인지 거짓인지 판단해준다 if랑 살짝비슷한듯..?
+ex)bool isFullLevel = false;
+
+보통 프로그래밍은 선언>초기화>호출로 사용된다(c언어랑 비슷함)
+
+주석은 뭐..알겠지?
+
+여기서 c언어의 printf("hello world\n");이거는
+Debug.Log("hello world");이다
+
+chapter 2.배열
+c#에서는 앞서 배운 변수를 묶을수있는 그룹형 변수가 있다(배열 비슷함)
+c언어처럼 배열은 0부터 시작이다
+ex) string[] monsters = {"슬라임", "사막뱀", "악마"};
+ex) int[] monstersLevel= new int[3];
+monstersLevel[0] = 1;
+monstersLevel[1] = 20;
+monstersLevel[2] = 6;
+
+Debug.Log("맵에 존재하는 몬스터의 레벨");
+Debug.Log(monstersLevel[0])
+Debug.Log(monstersLevel[1])
+Debug.Log(monstersLevel[2])
+-----------------------------------------
+List기능이 추가된 가변형 그룹형 변수
+List<string> items = new List<string>();
+items.Add("생명물약 30");
+items.Add("마나물약 30");
+여기서 뉴는 새롭게 변수를 만든다는 뜻
+
+items,RemoveAt(0); //생명물약이 사리짐
++List에서는 아이템을 삭제 할수가있음 
+
+Debug.Log("가지고 있는 아이템");
+Debug.Log(items[0]);
+Debug.Log(items[1]);
+크기를 벗어난 탐색은 오류를 발생함
+-------------------------------------------------
+chapter 3.연산자 
+int exp=1500;
+
+exp = 1500 +320; //더하기
+exp = exp -10; // 빼기
+level = exp / 300; // 나누기 
+strength = level *3.1f; // 곱하기
+
+Debug.Log("용사의 총 경험치는?");
+Debug.Log(exp);
+Debug.Log("용사의 레벨은?");
+Debug.Log(level);
+Debug.Log("용사의 힘은");
+Debug.Log(strength);
+
++c처럼 특이한 나머지가 있다 %가 나머지구하는 연산
+int nextExp = 300  - (exp % 300);
+Debug.Log("다음 레벨까지 남은 경험치는?");
+Debug.Log("nextExp);
+
+string title = "전설의";
+Debug.Log("용사의 이름은?");
+Debug.Log("title + " "+ playerName");
+이렇게하면 타이틀 붙일수있음
+ex)playerName=나검사 title=전설의
+playerName=전설의 나검사 이렇게 된다
+
+비교연산자
+int fullLevel = 99;
+isFullLevel = level == fullLevel;
+Debug.Log("용사는 만렙입니까?" + isFullLevel);
+위에 설정한대로하면 False뜨는게 정상
+
+bool isEndTitorial = level > 10;
+Debug.Log("튜토리얼이 끝난 용사입니까?"  + isEndTitorial); 
+위에 설정한대로하면 False뜨는게 정상
+
+int health = 30;
+int mana = 25;
+bool isbadConmdition = health <= 50 && mana<20
+Debug.Log("용사의 상태가 나쁩니까?" +isbadConmdition);
+
+chapter4 키워드
+int float = 1;
+string name = List; 
+
+5.조건문 
