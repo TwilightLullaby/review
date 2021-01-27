@@ -87,8 +87,9 @@ short, int, long, long long은 정수형 자료
 cpu, memory, hdd, sdd
 
 cpu는 Central Processing Unit(센트럴 프로세싱 유닛)중앙처리장치이고
+레지스터라는 임시공간이 있다
 
-memory=작업테이블이라고 생각하면 편하다
+memory=작업테이블이라고 생각하면 편하다 이제 각 구역별로 나눈 작업테이블로 
 Random Access Memory(랜덤 어세스 메모리)주기억장치
 
 HDD는 Hard Disk Drive의 약자다
@@ -97,3 +98,7 @@ SDD는 Solid State Drive의 약자다
 
 cpu랑 memory는 통신이 가능하다 하지만 보조기억장치와는 통신이 불가능하다
 보조기억장치와 memory는 통신이 가능하다 하지만 cpu랑은 통신이 불가능하다
+
+1byte=2의8제곱
+2byte=2의 16제곱
+4byte= 2의 32제곱=32비트 똑같은말이다 64비트는 2의 64제곱
