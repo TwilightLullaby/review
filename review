@@ -75,7 +75,7 @@ short* point = malloc(sizeof(short)*11);
 
 공백열 받는 (띄어 쓰기)는 scanf_s("%[^\n]s", str, sizeof(str));
 이렇게 하면된다
-
+매개변수=함수호출 넘어가기전에 저장하는 변수
 ----------------------------------------------------------------------------
 포인터 복습 및 다시 공부
 자료형에는 char=1, short=2, int=4, long=4, longlong=8, flaot=4, double=8, longduble=8,12 16 즉 8이상
@@ -90,7 +90,12 @@ cpu는 Central Processing Unit(센트럴 프로세싱 유닛)중앙처리장치�
 레지스터라는 임시공간이 있다
 
 memory=작업테이블이라고 생각하면 편하다 이제 각 구역별로 나눈 작업테이블로 
-Random Access Memory(랜덤 어세스 메모리)주기억장치
+Random Access Memory(랜덤 어세스 메모리)주기억장치가 있다
+메모리 구조 
+stack=지역변수, 매개변수
+heap=동적할당
+deta=전역변수, 상수
+code segement=함수
 
 HDD는 Hard Disk Drive의 약자다
 SDD는 Solid State Drive의 약자다
