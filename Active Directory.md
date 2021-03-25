@@ -118,3 +118,39 @@ tip
 
 중요(시험에 나올 것들)
 ======
+
+
+
+
+계정 만드는 과정ㄷ
+administrator@yonsai.com에서 교무부 ou를 만들려고한다
+ou제작 : dsadd ou "ou=교무부,dc=yonsai,dc=com"
+user 제작 dsadd user "cn=administrator,dc=yonsai,dc=com" -samid 교무부 -upn  kdh@yonsai.com -pwd Yons@i602
+ou 사용자 만들기 실습
+1.eduteam 이름으로 OU를 생성->dsadd ou "ou=eduteam,dc=yonsai,dc=com"
+2.정동현 계정을 생성 ->dsadd user "cn=정동현,dc=yonsai,dc=com" -samid kdh -upn kdh@yonsai.com -pwd Yons@i602
+3.정동현 계정을 생성을 User 컨테이너로 옮기기->dsmove " "cn=정동현,dc=yonsai,dc=com" -newparent "
+4.정동현 사용자 eduteam OU로 이동시키기 ->dsmove "cn=정동현,dc=yonsai,dc=com" -newparent "OU=eduteam,DC=yonsai,DC=com"
+
+
+1.  yonsai.com 도메인에  원더걸수 OU를 만드시오
+dsadd ou "원더걸수,dc=yonsai,dc=com"
+2. 원더걸스 OU안에 사용자를 생성하시오
+	cn:소희
+	samid:wonder1
+	upn:wonder@yonsai.com
+	pwd:kdangh12234
+dsadd user "cn=소희,dc=yonsai,dc=com" -samid wonder1 -upn wonder@yonsai.com =pwd kdangh12234
+	
+2-2 
+	cn:선예
+	samid:wonder2
+	upn:wonder2@yonsai.com
+	pwd:kdangh1234
+3 연세직업전문학교 ou안에 소녀시대 ou 생성하시오
+4 소녀시대 ou에 사용자를 각각 만들고 옵션구성을 한번에 하시오
+	a.CN: 태연 upn:girl@yonsai.com
+	b.CN: 윤아 upn:girl@yonsai.com
+	공통
+	pwd :kdangh1234
+5. 원더걸스 OU를 연세직업전문학교 OU로 이동하시오
