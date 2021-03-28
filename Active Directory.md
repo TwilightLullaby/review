@@ -143,9 +143,53 @@ Active Directory설치
 ![image](https://user-images.githubusercontent.com/76859458/112743163-e0f3ac00-8fcf-11eb-9a42-fed480b438b2.png)            
 ![image](https://user-images.githubusercontent.com/76859458/112743186-139da480-8fd0-11eb-9d1c-cf2cacc1d336.png)            
 ![image](https://user-images.githubusercontent.com/76859458/112743193-18625880-8fd0-11eb-8f5e-4ac1550b00fc.png)              
+* * *
+
+
+도메인에 컴퓨터 등록하기   
+====
++ 1.ncpa.cpl가서 DNS서버 주소를 변경한다 192.168.111.10(퍼스트)로 바꾸자
++ 2.스크롤락오른쪽키+윈도우 누르면 아래의 이미지가 나온다
++ + ![image](https://user-images.githubusercontent.com/76859458/112752537-80379400-900e-11eb-8bf6-e6b4b7818874.png)
++ 3.아래처럼 DNS서버를 바꾸자
++ + ![image](https://user-images.githubusercontent.com/76859458/112752571-a52c0700-900e-11eb-8d53-b52a874227d3.png)
+
+* * *
+
+second.yonsai.com 도메인 구성하기
+===========
++ 1.도메인 서버를 설치한다(퍼스트와 동일)
++ 2.서버  관리자에서 알림을 클릭 이 서버를 도메인 컨트롤러 승격을 클릭한다.
++ 3.배포 구성에서 기존 포리스트에 새 도메인을 추가합니다를 선택
++ 4.부모 도메인 이름은 yonsai.com 새 도메인 이름은 second로 입력
++ 5.변경을 클릭해서 yonsai.com의 도메인 관리자인 administrator@yonsai.com/  Yons@i602 을 입력
++ 6.도메인 컨트롤러 옵션에서 windows sever 2016만 사용할 것이므로 '도메인 기능 수준'체크
++ 7.windows sever t머시기 프리뷰로 한다 또 기본으로 설정된 DNS 서버의 체크를 끄고 GC만 설치되도록한다
++ + 끄는 이유는 도메인서비스 세컨드 한개 서버만 이용하기때문 막 20개서버 이용하면 체크해야함
++ 8.DSRM의 비밀번호는 Yons@i602로 지정 한다(AD DS 복구하는 비밀번호)
++ 9.경로에서 풀더위치도 그대로 두고 다음
++ 10.경고 무시하고 설치
+![image](https://user-images.githubusercontent.com/76859458/112753232-b3c7ed80-9011-11eb-8b49-0d6c81ca3cc6.png)    
+![image](https://user-images.githubusercontent.com/76859458/112753239-bfb3af80-9011-11eb-9053-b7ae4da6c631.png)        
 
 
 
+
+* * *
+
+
+써드를 yonsai.com도메인에 추가하기
+=====
+
+
+
+
+
+
+
+
+
+* * *
 tip
 =====
 
