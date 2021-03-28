@@ -106,19 +106,59 @@ DNS
 * * *
 윈도우 서버 변경 방법
 ==========
+### 윈7서버 : 서버관리자>도구>컴퓨터관리>로컬사용자및 그룹>사용자>어드미니스트레이트>오른쪽 클릭 암호설정     
+![image](https://user-images.githubusercontent.com/76859458/112742986-5fe7e500-8fce-11eb-859a-ee24395fbf5c.png)
+
+### 윈10:서버관리자 없으므로 실행창에서 명령어 입력 compmgmt.msc = 윈도우키누르고 컴퓨터 관리 클릭        
+![image](https://user-images.githubusercontent.com/76859458/112742994-6fffc480-8fce-11eb-802d-c9ecd0e61cd9.png)
+
+* * *
+Active Directory설치
+=====
++ 1.서버 관리자    
++ 2.관리    
++ 3.역할 및 기능추가  
++ + ![image](https://user-images.githubusercontent.com/76859458/112743129-92dea880-8fcf-11eb-9522-7a0c4a66fc45.png) 
++ 4.시작하기 전
++ 5.설치 유형
++ 6.서버선택
++ 7.도메인서버
++ 8.기능추가
++ 9.ADDS에서
++ 10.확인에서 필요한경우 자동으로 ~를 체크한후 설치 클릭
++ 11.서버관리자 알림을 클릭하고 이 서버를 도메인 컨트롤러로 승격을 클릭한다
++ 12.새프리스트를 추가합니다
++ 13.루트 도메인이름을 yonsai,.com를 입력
++ 14.도메인 컨트롤러 옵션에서 DNS 서버,GC(글로벌 카탈로그) 비밀번호 Yons@i602
++ 15.DNS옵션 아무것도 누르지말고 다음 누른후 잠시 대기하기
++ 16.netbios도메인 이름에 자동으로 yonsai로 입력
++ 17.검토옵션
++ 18.필수구성요소확인에서 검증작업 마치기(경고 몇개뜨는데 무시하자)
++ 19.연사이 어드미니스티레이터는 yonsai도메인의 natbios이다
+
+설치 사진버전
+----
+![image](https://user-images.githubusercontent.com/76859458/112743155-d6391700-8fcf-11eb-9780-1a7c1bc993c1.png)                 
+![image](https://user-images.githubusercontent.com/76859458/112743159-d9340780-8fcf-11eb-958f-0f675ba9f618.png)                    
+![image](https://user-images.githubusercontent.com/76859458/112743163-e0f3ac00-8fcf-11eb-9a42-fed480b438b2.png)            
+![image](https://user-images.githubusercontent.com/76859458/112743186-139da480-8fd0-11eb-9d1c-cf2cacc1d336.png)            
+![image](https://user-images.githubusercontent.com/76859458/112743193-18625880-8fd0-11eb-8f5e-4ac1550b00fc.png)              
+
 
 
 tip
 =====
+
 + 아이피를 도메인 역방향
 + 도메인을 아이피로 정방향 
 + eksrhfaaa@naver.com에서 naver.com은 도메인 eksrhfaaa 아이디 @<-이 기능은 아이디와 도메인 구별하기위해 있는거다
 * * *
 * * *
 
+
 중요(시험에 나올 것들)
 ======
-
++ administrator@yonsai=UPN=윈도우같은 운영체제로할려면 이메일형식처럼해야함@붙여서=앞에는 아이디 @뒤에는도메인 이메일도 같은형식=UPN시험에나옴 중요 ★     
 
 
 
