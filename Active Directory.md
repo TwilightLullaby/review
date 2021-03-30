@@ -178,15 +178,32 @@ second.yonsai.com 도메인 구성하기
 * * *
 
 
-써드를 yonsai.com도메인에 추가하기
+THIRD를 yonsai.com도메인에 추가하기
 =====
++ 1.액티브 디렉토리 설치
++ 2.서버관리자 알림을 클릭하고 이 서버를 도메인 컨트롤러로 승격을 클릭한다
++ 3.배포 구성에서 기존 도메인에 도메인 컨트롤러를 추가
++ 4.도메인 이름은 yonsai.com으로 변경
++ 5.변경 클릭 yonsai의 도메인 관리자인 administrator@yonsai.com/ Yon@i602를 입력
++ 6.RODC옵션 에서 써드를 관리할 사용자를 지정 한다
++ 7.선택을 클릭 사용자 또는 그룹 고급을 클릭 지금 찾기를 클릭
++ 8.administrator관리자를 더블 클릭한다 확인을 클릭하면 위임된 관리자 계정이 완성
++ 9.선택->고급->지금찾기->어드민
+![image](https://user-images.githubusercontent.com/76859458/112986966-20bbbe80-919d-11eb-8fe0-1d7c933406c3.png)
+![image](https://user-images.githubusercontent.com/76859458/112986984-26190900-919d-11eb-8f91-86f5b652f273.png)
+![image](https://user-images.githubusercontent.com/76859458/112986999-2d401700-919d-11eb-80ef-d98e8bea0cd2.png)
 
+* * *
+Active Directory 관리설정
+=====
+![image](https://user-images.githubusercontent.com/76859458/112987615-e43c9280-919d-11eb-89b1-e8a98b8b3849.png)
+![image](https://user-images.githubusercontent.com/76859458/112987666-f28aae80-919d-11eb-8b9c-13210da583cc.png)
 
-
-
-
-
-
+* * *
+second에서 first의 c드라이브를 사용할 수 있도록 설정
+======
++ 1.퍼스트에서 원격 데스크톱 연결 키기
++ 2.자세히 누르고 사진처럼 하면 된다
 
 
 * * *
@@ -196,45 +213,33 @@ tip
 + 아이피를 도메인 역방향
 + 도메인을 아이피로 정방향 
 + eksrhfaaa@naver.com에서 naver.com은 도메인 eksrhfaaa 아이디 @<-이 기능은 아이디와 도메인 구별하기위해 있는거다
++ 1.hird\administrator->써드의 관리자 계정
++ 2.administrator@yonsai.com -> first의 관리자 계정
++ 3.administrator@second.second.yonsai.com -) second의 관리자계정
++ 4.![image](https://user-images.githubusercontent.com/76859458/112989699-26ff6a00-91a0-11eb-827a-b3e373a801fb.png)
++ 5.![image](https://user-images.githubusercontent.com/76859458/112989862-54e4ae80-91a0-11eb-9d6d-808f9a7e0a1a.png)
+
 * * *
 * * *
 
 
 중요(시험에 나올 것들)
 ======
-+ administrator@yonsai=UPN=윈도우같은 운영체제로할려면 이메일형식처럼해야함@붙여서=앞에는 아이디 @뒤에는도메인 이메일도 같은형식=UPN시험에나옴 중요 ★     
-
-
-
-계정 만드는 과정ㄷ
-administrator@yonsai.com에서 교무부 ou를 만들려고한다
-ou제작 : dsadd ou "ou=교무부,dc=yonsai,dc=com"
-user 제작 dsadd user "cn=administrator,dc=yonsai,dc=com" -samid 교무부 -upn  kdh@yonsai.com -pwd Yons@i602
-ou 사용자 만들기 실습
-1.eduteam 이름으로 OU를 생성->dsadd ou "ou=eduteam,dc=yonsai,dc=com"
-2.정동현 계정을 생성 ->dsadd user "cn=정동현,dc=yonsai,dc=com" -samid kdh -upn kdh@yonsai.com -pwd Yons@i602
-3.정동현 계정을 생성을 User 컨테이너로 옮기기->dsmove " "cn=정동현,dc=yonsai,dc=com" -newparent "
-4.정동현 사용자 eduteam OU로 이동시키기 ->dsmove "cn=정동현,dc=yonsai,dc=com" -newparent "OU=eduteam,DC=yonsai,DC=com"
-
-
-1.  yonsai.com 도메인에  원더걸수 OU를 만드시오
-dsadd ou "원더걸수,dc=yonsai,dc=com"
-2. 원더걸스 OU안에 사용자를 생성하시오
-	cn:소희
-	samid:wonder1
-	upn:wonder@yonsai.com
-	pwd:kdangh12234
-dsadd user "cn=소희,dc=yonsai,dc=com" -samid wonder1 -upn wonder@yonsai.com =pwd kdangh12234
-	
-2-2 
-	cn:선예
-	samid:wonder2
-	upn:wonder2@yonsai.com
-	pwd:kdangh1234
-3 연세직업전문학교 ou안에 소녀시대 ou 생성하시오
-4 소녀시대 ou에 사용자를 각각 만들고 옵션구성을 한번에 하시오
-	a.CN: 태연 upn:girl@yonsai.com
-	b.CN: 윤아 upn:girl@yonsai.com
-	공통
-	pwd :kdangh1234
-5. 원더걸스 OU를 연세직업전문학교 OU로 이동하시오
++ 기본적인 도메인 로그온 이름:YONSAI\thisuser
++ UPN : thisUser@yonsai.com
++ 자동으로 주소 받는걸 DHCP라고 한다(DHCP는 Dynamic Host Configuration Protocol의 약자)
++ nslookup= 도메인주소를 아이피 주소로 바꿔주는 중요한 명령어
++ ncpa.cpl->네트워크연결(제어판)
++ 스냅샷=게임으로 비유하면 세이브=백업
++ 서버관리자->로컬서버 ide보안강화 사용안함하면 가상머신에 파일이나 풀더 옮길수있음
++ administrator@yonsai=UPN=윈도우같은 운영체제로할려면 이메일형식처럼해야함@붙여서=앞에는 아이디 @뒤에는도메인 이메일도 같은형식=UPN
++ AGDLP항목 ★★ 시험 100%
++ windows sever에서 제공하는 기본 그룹 개념확인하기
++ 조직구성단위(OU)와 그룹의 차이점 문서 확인
+> 생성한 그룹 정책(GPO)이 적용되는 시점은 다음과 같다
+> > 사용자가 로그온할 떄
+> > 컴퓨터 재부팅 했을때
+> > 사용자가 강제로 직접 그룹 정책을 받아 올때(명령어 : gpupdate /force) ★★
+> > 정책을 받아오는 주기적인 시간이 되었을 때
+> 윈도우 서버 2019 설치
+> > 주소 변화 기술로 사설아이피를 공인아이피를 사설아이피로 변경 선택 (NAT)
